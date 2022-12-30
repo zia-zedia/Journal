@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container pt-5 text-center">
+    <p class="fs-1">Welcome to Journalingo.</p>
+    <div class="container border shadow-sm p-3 mt-5 bg-body rounded">
+        <h1 class = allign-left>Login:</h1>
+        <div class="container">
+            <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" name="btn btn-primary" value="Login">
+        </form>
+        </div>
+    </div>
+    <p class="fs-2">First time here? <a>Create a new account!</a></p>
+</div>
+{% endblock %}
