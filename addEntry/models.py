@@ -6,3 +6,6 @@ class JournalEntry(models.Model):
     title = models.CharField(max_length= 100)
     text = models.TextField()
     creationDate = models.DateTimeField('date published')
+
+    def __str__(self):
+        return self.title
