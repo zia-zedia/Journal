@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container pt-5 text-center">
+</div>
+<div class="container border shadow-sm p-3 mt-5 bg-body rounded">
+    <p class="fs-3">Update Form:</p>
+    <div class="main">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Update">
+        </form>
+ {% endblock %}
+    </div>
+</div>

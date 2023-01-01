@@ -16,7 +16,8 @@
                 <p>{{ entry.text }}</p>
                 <div class="d-flex row">
                     <div class="col">
-                        <button type="button" class="btn btn-outline-dark w-10">Edit Entry</button>
+                        <button type="button" class="btn btn-dark w-10"><a class="link-light" href="posts/{{ entry.id }}">Edit Entry</a></button>
+                        <button type="button" class="btn btn-danger w-10"><a class="link-light" href="posts/{{ entry.id }}/delete">Delete Entry</a></button>
                     </div>
                 </div>
             </div>

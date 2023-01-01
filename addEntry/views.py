@@ -1,10 +1,11 @@
 from django.shortcuts import render
+
 from datetime import datetime
 from .models import JournalEntry
 from .forms import PostForm
 # Create your views here.
 
-def index(request):
+def create_view(request):
     
     form = PostForm()
     context = {'form':form}
@@ -15,8 +16,7 @@ def index(request):
             title = form.cleaned_data["title"]
             text = form.cleaned_data["text"]
             creationDate = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
             entryObj = JournalEntry(title = title, text = text,creationDate = creationDate)
-            entryObj.save()
+            entryObj.save() 
 
-    return render(request, 'index.html', context)
+    return render(request, 'create_post.html', context)
