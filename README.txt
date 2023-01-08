@@ -8,7 +8,7 @@
 2. Launch the anaconda prompt
 3. Change the directory to the project's directory
 4. Perform the following commands:
-  - conda create --name JournalEnv django ///// Creates a new virtual environment called LMS /////
+  - conda create --name JournalEnv django ///// Creates a new virtual environment called JournalEnv /////
   - conda activate JournalEnv ///// Activates the newly created virtual environment /////
   - pip install -r requirement.txt ///// Installs additional files to help run this project universally with different versions of django /////
   - python manage.py makemigrations ///// Makes migrations in case of any changes in models /////
